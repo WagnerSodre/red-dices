@@ -14,25 +14,24 @@
         <img src="assets/dices-logo.png" alt="Logo Red Dices" />
         <span>RED DICES</span>
       </div>
-      <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
-        <a href="#" class="btn">Fale conosco</a>
-      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav" id="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#produtos">Serviços</a>
+            <a href="https://wa.me/5521988510351" target="_blank" rel="noopener noreferrer" class="btn">Fale conosco</a>
+        </nav>
     </div>
   </header>
 
-  <main class="hero">
+  <main class="hero section">
     <div class="container">
       <h1>Soluções digitais sob medida<br>para o seu negócio.</h1>
       <p>Da fazenda à fintech, desenvolvemos sistemas eficientes com quem entende do negócio.</p>
-      <a href="#" class="btn">Fale conosco</a>
+      <a href="https://wa.me/5521988510351" target="_blank" rel="noopener noreferrer" class="btn">Fale conosco</a>
     </div>
   </main>
 
-  <section class="experience">
+  <section class="experience section">
     <div class="container">
       <h2>Experiência corporativa que faz diferença</h2>
       <p>Nossos especialistas já atuaram em projetos nas seguintes empresas:</p>
@@ -42,8 +41,68 @@
         <img src="assets/logos/conta_simples.webp" alt="Conta Simples">
         <img src="assets/logos/alice.svg" alt="Alice">
         <img src="assets/logos/ibge.png" alt="IBGE">
+        <img src="assets/logos/cowntrole.png" alt="Cowntrole">
       </div>
     </div>
   </section>
+
+<section class="produtos section" id="produtos">
+  <div class="container">
+    <h2>Nossos Produtos</h2>
+    <div class="produtos-grid">
+      <div class="produto">
+        <div class="icone">💻</div>
+        <h3>Desenvolvimento de Websites</h3>
+        <p>Sites institucionais, landing pages e portfólios com design moderno e performance otimizada.</p>
+      </div>
+      <div class="produto">
+        <div class="icone">📱</div>
+        <h3>Desenvolvimento de Aplicativos</h3>
+        <p>Aplicativos mobile para Android e iOS, nativos ou híbridos, com foco em experiência e usabilidade.</p>
+      </div>
+      <div class="produto">
+        <div class="icone">🛠️</div>
+        <h3>Software Sob Medida</h3>
+        <p>Soluções personalizadas para o seu negócio, com integrações, automações e foco em resultado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="como-fazemos section" id="como-fazemos">
+  <div class="container">
+    <h2>Como fazemos</h2>
+    <div class="etapas">
+      <div class="etapa">
+        <div class="icone">🧠</div>
+        <h3>Entendimento</h3>
+        <p>Começamos com uma conversa para entender o seu negócio, suas necessidades e objetivos.</p>
+      </div>
+      <div class="etapa">
+        <div class="icone">⚙️</div>
+        <h3>Desenvolvimento Ágil</h3>
+        <p>Com sprints curtos e entregas frequentes, garantimos visibilidade e evolução constante do projeto.</p>
+      </div>
+      <div class="etapa">
+        <div class="icone">🚀</div>
+        <h3>Entrega e Evolução</h3>
+        <p>Publicamos, acompanhamos e ajustamos o sistema conforme ele é usado, com base no seu feedback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Red Dices. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
 </body>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("active");
+  }
+</script>
 </html>

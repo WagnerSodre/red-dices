@@ -1,3 +1,4 @@
+/* Base */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -11,28 +12,57 @@ body {
   margin: auto;
 }
 
+.section {
+  padding: 8rem 2rem !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
 .header {
   background-color: #111827;
   color: white;
   padding: 1rem 0;
 }
 
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
   font-family: 'Montserrat', sans-serif;
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .nav a {
@@ -48,6 +78,7 @@ body {
   font-weight: bold;
 }
 
+/* Hero */
 .hero {
   background-color: #111827;
   color: white;
@@ -75,6 +106,7 @@ body {
   text-decoration: none;
 }
 
+/* Logos / Experiência */
 .experience {
   background-color: #f9fafb;
   text-align: center;
@@ -91,33 +123,18 @@ body {
   margin-bottom: 2rem;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.logo img {
-  height: 45px;
-  width: auto;
-}
-
 .logos {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
 }
 
 .logos img {
-  max-height: 40px;
-  max-width: 120px;
+  max-height: 60px;
+  max-width: 160px;
   filter: grayscale(100%);
-  opacity: 0.8;
+  opacity: 0.85;
   transition: all 0.3s ease;
   object-fit: contain;
 }
@@ -125,4 +142,172 @@ body {
 .logos img:hover {
   filter: none;
   opacity: 1;
+}
+
+/* Produtos */
+.produtos {
+  background-color: #111827;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.produtos h2 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.produtos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.produto {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.produto .icone {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.produto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.produto p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Como Fazemos */
+.como-fazemos {
+  background-color: #f9fafb;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.como-fazemos h2 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  color: #111827;
+}
+
+.etapas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.etapa {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.etapa .icone {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.etapa h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.etapa p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.875rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .produtos-grid,
+  .etapas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logos {
+    gap: 1rem;
+  }
+
+  .logos img {
+    max-width: 100px;
+    max-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .logos img {
+    max-width: 80px;
+    max-height: 28px;
+  }
 }
